@@ -1,0 +1,77 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+html body {
+  margin: 0;
+  padding: 0;
+  direction: rtl;
+}
+html body .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: unset;
+  align-items: unset;
+}
+html body .container .right-section .sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: unset;
+  align-items: space-between;
+  width: 240px;
+  background-color: #F1F2F7;
+}
+html body .container .right-section .sidebar .company-name {
+  position: fixed;
+  top: 0;
+}
+html body .container .right-section .sidebar .menu-options {
+  display: flex;
+  flex-direction: column;
+  justify-content: unset;
+  align-items: unset;
+  margin-top: 80px;
+}
+html body .container .right-section .sidebar .menu-options a {
+  color: gray;
+  text-decoration: none;
+  padding: 5%;
+}
+html body .container .right-section .sidebar .menu-options .menu, html body .container .right-section .sidebar .menu-options .others {
+  padding: 5%;
+  color: gray;
+}
+html body .container .right-section .sidebar .company-logo {
+  position: fixed;
+  bottom: 0;
+}
+html body .container .left-section .navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: unset;
+  align-items: space-between;
+}
+html body .container .left-section .navbar .search-box input {
+  background-color: #F6F6FB;
+  border: none;
+  border-radius: 5px;
+  width: 400px;
+}
+html body .container .left-section .navbar .user-account {
+  position: fixed;
+  left: 0;
+}
+html body .container .left-section .navbar .user-account a {
+  text-decoration: none;
+  color: black;
+}
+html body .container .left-section .footer {
+  position: fixed;
+  bottom: 0;
+}
+html body .container .left-section .footer p {
+  color: gray;
+}/*# sourceMappingURL=style.css.map */
