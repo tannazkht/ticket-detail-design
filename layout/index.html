@@ -5,14 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>جزئیات تیکت</title>
     <link rel="stylesheet" href="../style/style.css">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
     
 </head>
 <body>
     
 
-    <div class="container">
+    <div class="main-container">
         <div class="right-section">
             <div class="sidebar">
                 <!-- main side bar -->
@@ -70,19 +72,106 @@
                     <input type="search" name="search" placeholder="جستجو">
                 </div>
                 <div class="user-account">
-                    <img src="" alt="user account image">
+                    <img src="../assets/images/user1.jpg" class="user-image" alt="user account image">
                     <a href="#">حساب کاربری</a>
                     <!-- dropdown icon -->
-                    <img src="../assets/icons/chevron-down.svg" alt="dropdown icon">
+                    <img src="../assets/icons/chevron-down.svg" class="arrow-down-icon" alt="dropdown icon">
                     <!-- bell icon -->
+                    <img src="../assets/icons/bell.svg" alt="bell icon">
                 </div>
-
-
-
-
             </div>
             <div class="main-content">
                 <!-- main content -->
+                 <div class="row-1">
+                        <div class="row-1-1">
+                            <p><a href="#"><img src="../assets/icons/home.svg" alt="home icon"></a> / <a href="#" style="color: #27709A;">آیتم ۱</a> / <a href="#" style="color: lightgray;">صفحه کنونی</a></p>
+                        </div>
+                        <div class="row-1-2">
+                            <a href="#"><img src="../assets/icons/arrow-square-up.svg" alt="left arrow square">بازگشت</a>
+                        </div>
+                        <div class="row-1-3">
+                            <div class="status-progress">
+                                <!-- <div class="progress-line"></div> -->
+                                <div class="step-1 steps">
+                                    <i class="bi bi-check2-circle"></i>
+                                    <p>دریافت شده</p>
+                                </div>
+                                <div class="step-2 steps">
+                                    <i class="bi bi-clock-history"></i>
+                                    <p>در حال بررسی</p>
+                                </div>
+                                <div class="step-3 steps">
+                                    <i class="bi bi-check2-circle"></i>
+                                    <p>حل شده</p>
+                                </div>
+                                <div class="step-4 steps">
+                                    <i class="bi bi-check2-circle"></i>
+                                    <p>بسته شده</p>
+                                </div>
+                            </div>
+                        </div>
+                 </div>
+                 <div class="row-2">
+                    <div class="subject-box">
+                        <div class="line-1">
+                            <p>#T-۲۰۲۴-۰۰۱</p>
+                            <span>در حال بررسی</span> 
+                        </div>
+                        <p>موضوع: کندی در آپلود فایل</p>
+                        <p>توضیحات: نمی توانم با نام کاربری و رمز عبور خود وارد سیستم مدیریت اسناد شوم. پیغام خطای "نام کاربری یا رمز عبور اشتباه است نمایش داده می شود."</p>
+                        <p>فایل پیوست:                                     <i class="bi bi-paperclip text-muted"></i>
+                                    <a href="#" class="text-primary" style="text-decoration: none;">screenshot-login-error.png</a></p>
+                    </div>
+                    <div class="ticket-detail-box">
+                        <p class="ticket-detail-header">جزئیات تیکت #T-۲۰۲۴-۰۰۱</p>
+                        <p class="ticket-detail">
+                            نام مشتری: مهدی محمدی<br>
+                            شماره تماس: ۰۹۹۱۲۶۷۰۳۰۱<br>
+                            تاریخ ایجاد:۱۴۰۳/۰۷/۱۵ - ۰۹:۳۰<br>
+                            آخرین بروزرسانی: ۱۴۰۳/۰۷/۱۵ - ۱۴:۲۰<br>
+                            محصول: DMS - سیستم مدیریت اسناد و مدارک
+                        </p>
+                    </div>
+                 </div>
+                 <div class="row-3">
+                    <div class="chat-box">
+                        <div class="chat-header">
+                            <a href="#">مکالمه</a>
+                            <a href="#">یادداشت های داخلی</a>
+                        </div>
+                        <div class="conversations">
+                            <div class="message-1">
+                                <div class="image-and-message">
+                                    <!-- <img src="" alt=""> -->
+                                    <i class="bi bi-headset"></i>
+                                    <span class="message">سلام، مشکل شما در حال بررسی است. لطفا نام کاربری دقیق خود را ارسال کنید.</span>
+                                </div>
+                                <p>علی محمدی- پشتیبانی فنی <span class="date-and-time">۲۵ دی ۱۴۰۲ ساعت ۱۱:۰۰</span></p>
+                            </div>
+                            <div class="message-2">
+                                <div class="image-and-message">
+                                    <img src="../assets/images/user1.jpg" alt="user image">
+                                    <span class="message">نام کاربری من: ahmad.mohammadi است.</span>
+                                </div>
+                                <p>پارسا حسینی<span class="date-and-time">۲۵ دی ۱۴۰۲ ساعت ۱۱:۰۰</span></p>
+                            </div>
+                            <div class="message-3">
+                                <div class="image-and-message">
+                                    <!-- <img src="" alt=""> -->
+                                    <i class="bi bi-headset"></i>
+                                    <span class="message">سلام، مشکل شما در حال بررسی است. لطفا نام کاربری دقیق خود را ارسال کنید.</span>
+                                </div>
+                                <p>علی محمدی- پشتیبانی فنی<span class="date-and-time">۲۵ دی ۱۴۰۲ ساعت ۱۱:۰۰</span>:</p>
+                            </div>
+                        </div>
+                        <!-- <div class="input-section">
+                            <form action="" method>
+                                <textarea name="text"></textarea>
+                            </form>
+                        </div> -->
+                    </div>
+                    <div class="status-managing"></div>
+                 </div>
             </div>
             <div class="footer">
                 <!-- footer -->
