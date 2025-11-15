@@ -110,6 +110,7 @@ html {
                     @include flex-manager(column, unset, unset);
                     .row-1 {
                         .row-1-1 {
+                            position: fixed;
                             p {
                                 a {
                                     text-decoration: none;
@@ -117,6 +118,7 @@ html {
                             }
                         }
                         .row-1-2 {
+                            // position: fixed;
                             a {
                                 text-decoration: none;
                                 color: gray;
@@ -202,6 +204,7 @@ html {
                             width: 1000px;
                             padding: 2%;
                             margin: 2% 0;
+                            // margin-left: 5%;
                             .chat-header {
                                 border: 1px solid lightgray;
                                 background-color: lightgray;
@@ -220,6 +223,7 @@ html {
                             }
                             .conversations {
                                 .message-1, .message-3 {
+                                    padding-top: 30px;
                                     .message {
                                     color: white;
                                     background-color: #1D7AD6;
@@ -236,6 +240,8 @@ html {
                                         padding: 0 5px;
                                     }
                                     p {
+                                        margin-right: 50px;
+                                        margin-top: 10px;
                                         .date-and-time {
                                             color: lightgray;
                                         }
@@ -257,6 +263,8 @@ html {
                                         width: 50px;
                                     }
                                         p {
+                                            margin-left: 50px;
+                                            margin-top: 10px;
                                         .date-and-time {
                                             color: lightgray;
                                         }
@@ -296,6 +304,7 @@ html {
                                 // width: 30%;
                                 height: 250px;
                                 margin: 2%;
+                                margin-top: 6%;
                             .status-management-header {
                                 border-bottom: 1px solid lightgray;
                                 padding: 2%;

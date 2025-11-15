@@ -109,6 +109,9 @@ html body .main-container .left-section .main-content {
   justify-content: unset;
   align-items: unset;
 }
+html body .main-container .left-section .main-content .row-1 .row-1-1 {
+  position: fixed;
+}
 html body .main-container .left-section .main-content .row-1 .row-1-1 p a {
   text-decoration: none;
 }
@@ -214,6 +217,9 @@ html body .main-container .left-section .main-content .four-boxes .column-1 .cha
   background-color: white;
   border-radius: 20px;
 }
+html body .main-container .left-section .main-content .four-boxes .column-1 .chat-box .conversations .message-1, html body .main-container .left-section .main-content .four-boxes .column-1 .chat-box .conversations .message-3 {
+  padding-top: 30px;
+}
 html body .main-container .left-section .main-content .four-boxes .column-1 .chat-box .conversations .message-1 .message, html body .main-container .left-section .main-content .four-boxes .column-1 .chat-box .conversations .message-3 .message {
   color: white;
   background-color: #1D7AD6;
@@ -228,6 +234,10 @@ html body .main-container .left-section .main-content .four-boxes .column-1 .cha
   background-color: #EDEDED;
   border-radius: 100%;
   padding: 0 5px;
+}
+html body .main-container .left-section .main-content .four-boxes .column-1 .chat-box .conversations .message-1 p, html body .main-container .left-section .main-content .four-boxes .column-1 .chat-box .conversations .message-3 p {
+  margin-right: 50px;
+  margin-top: 10px;
 }
 html body .main-container .left-section .main-content .four-boxes .column-1 .chat-box .conversations .message-1 p .date-and-time, html body .main-container .left-section .main-content .four-boxes .column-1 .chat-box .conversations .message-3 p .date-and-time {
   color: lightgray;
@@ -247,6 +257,10 @@ html body .main-container .left-section .main-content .four-boxes .column-1 .cha
 }
 html body .main-container .left-section .main-content .four-boxes .column-1 .chat-box .conversations .message-2 img {
   width: 50px;
+}
+html body .main-container .left-section .main-content .four-boxes .column-1 .chat-box .conversations .message-2 p {
+  margin-left: 50px;
+  margin-top: 10px;
 }
 html body .main-container .left-section .main-content .four-boxes .column-1 .chat-box .conversations .message-2 p .date-and-time {
   color: lightgray;
@@ -274,6 +288,7 @@ html body .main-container .left-section .main-content .column-2 .status-manageme
   border-radius: 10px;
   height: 250px;
   margin: 2%;
+  margin-top: 6%;
 }
 html body .main-container .left-section .main-content .column-2 .status-management .status-management-header {
   border-bottom: 1px solid lightgray;
