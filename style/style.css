@@ -70,13 +70,23 @@ html body .main-container .left-section .navbar {
   flex-direction: row;
   justify-content: unset;
   align-items: space-between;
+  position: sticky;
+  top: 0;
   padding: 2%;
+  background-color: white;
+  z-index: 2;
 }
 html body .main-container .left-section .navbar .search-box input {
   background-color: #F6F6FB;
   border: none;
   border-radius: 5px;
-  width: 400px;
+  width: 600px;
+  padding: 1.5%;
+}
+html body .main-container .left-section .navbar .search-box img {
+  width: 20px;
+  position: relative;
+  left: 40px;
 }
 html body .main-container .left-section .navbar .user-account {
   position: fixed;
@@ -144,68 +154,62 @@ html body .main-container .left-section .main-content .row-1 .row-1-3 .status-pr
 html body .main-container .left-section .main-content .row-1 .row-1-3 .status-progress .progress-line {
   height: 2px;
 }
-html body .main-container .left-section .main-content .row-2 {
+html body .main-container .left-section .main-content .four-boxes {
   display: flex;
-  flex-direction: row;
+  margin-right: 4%;
+}
+html body .main-container .left-section .main-content .four-boxes .column-1 {
+  display: flex;
+  flex-direction: column;
   justify-content: unset;
   align-items: unset;
+  width: 1000px;
 }
-html body .main-container .left-section .main-content .row-2 .subject-box {
+html body .main-container .left-section .main-content .four-boxes .column-1 .subject-box {
   border: 1px solid lightgray;
   border-radius: 10px;
-  padding: 5%;
-  width: 80%;
+  padding: 1%;
+  margin: 1%;
 }
-html body .main-container .left-section .main-content .row-2 .subject-box .line-1 {
+html body .main-container .left-section .main-content .four-boxes .column-1 .subject-box .line-1 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
-html body .main-container .left-section .main-content .row-2 .subject-box .line-1 span {
+html body .main-container .left-section .main-content .four-boxes .column-1 .subject-box .line-1 span {
   color: #0080C9;
   border: 1px solid #0080C9;
   border-radius: 10px;
   padding: 1%;
 }
-html body .main-container .left-section .main-content .row-2 .subject-box p {
+html body .main-container .left-section .main-content .four-boxes .column-1 .subject-box p {
   padding: 1% 0;
 }
-html body .main-container .left-section .main-content .row-2 .ticket-detail-box {
+html body .main-container .left-section .main-content .four-boxes .column-1 .chat-box {
   border: 1px solid lightgray;
   border-radius: 10px;
-}
-html body .main-container .left-section .main-content .row-2 .ticket-detail-box .ticket-detail-header {
-  border-bottom: 1px solid lightgray;
-}
-html body .main-container .left-section .main-content .row-2 .ticket-detail-box .ticket-detail {
-  color: gray;
-  padding: 1%;
-  line-height: 35px;
-}
-html body .main-container .left-section .main-content .row-3 .chat-box {
-  border: 1px solid lightgray;
-  border-radius: 20px;
-  width: 80%;
+  width: 1000px;
   padding: 2%;
+  margin: 2% 0;
 }
-html body .main-container .left-section .main-content .row-3 .chat-box .chat-header {
+html body .main-container .left-section .main-content .four-boxes .column-1 .chat-box .chat-header {
   border: 1px solid lightgray;
   background-color: lightgray;
   border-radius: 20px;
   padding: 0.5% 1%;
 }
-html body .main-container .left-section .main-content .row-3 .chat-box .chat-header a {
+html body .main-container .left-section .main-content .four-boxes .column-1 .chat-box .chat-header a {
   color: gray;
   text-decoration: none;
   padding: 0.5% 1%;
 }
-html body .main-container .left-section .main-content .row-3 .chat-box .chat-header a:hover {
+html body .main-container .left-section .main-content .four-boxes .column-1 .chat-box .chat-header a:hover {
   color: black;
   background-color: white;
   border-radius: 20px;
 }
-html body .main-container .left-section .main-content .row-3 .chat-box .conversations .message-1 .message, html body .main-container .left-section .main-content .row-3 .chat-box .conversations .message-3 .message {
+html body .main-container .left-section .main-content .four-boxes .column-1 .chat-box .conversations .message-1 .message, html body .main-container .left-section .main-content .four-boxes .column-1 .chat-box .conversations .message-3 .message {
   color: white;
   background-color: #1D7AD6;
   padding: 1.5% 2%;
@@ -214,18 +218,21 @@ html body .main-container .left-section .main-content .row-3 .chat-box .conversa
   border-bottom-right-radius: 0%;
   border-top-right-radius: 20px;
 }
-html body .main-container .left-section .main-content .row-3 .chat-box .conversations .message-1 i, html body .main-container .left-section .main-content .row-3 .chat-box .conversations .message-3 i {
+html body .main-container .left-section .main-content .four-boxes .column-1 .chat-box .conversations .message-1 i, html body .main-container .left-section .main-content .four-boxes .column-1 .chat-box .conversations .message-3 i {
   font-size: 30px;
+  background-color: #EDEDED;
+  border-radius: 100%;
+  padding: 0 5px;
 }
-html body .main-container .left-section .main-content .row-3 .chat-box .conversations .message-1 p .date-and-time, html body .main-container .left-section .main-content .row-3 .chat-box .conversations .message-3 p .date-and-time {
+html body .main-container .left-section .main-content .four-boxes .column-1 .chat-box .conversations .message-1 p .date-and-time, html body .main-container .left-section .main-content .four-boxes .column-1 .chat-box .conversations .message-3 p .date-and-time {
   color: lightgray;
 }
-html body .main-container .left-section .main-content .row-3 .chat-box .conversations .message-2 {
+html body .main-container .left-section .main-content .four-boxes .column-1 .chat-box .conversations .message-2 {
   direction: ltr;
 }
-html body .main-container .left-section .main-content .row-3 .chat-box .conversations .message-2 .message {
+html body .main-container .left-section .main-content .four-boxes .column-1 .chat-box .conversations .message-2 .message {
   color: gray;
-  background-color: lightgray;
+  background-color: #EDEDED;
   padding: 1.5% 2%;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 0%;
@@ -233,11 +240,47 @@ html body .main-container .left-section .main-content .row-3 .chat-box .conversa
   border-top-right-radius: 20px;
   direction: rtl;
 }
-html body .main-container .left-section .main-content .row-3 .chat-box .conversations .message-2 img {
+html body .main-container .left-section .main-content .four-boxes .column-1 .chat-box .conversations .message-2 img {
   width: 50px;
 }
-html body .main-container .left-section .main-content .row-3 .chat-box .conversations .message-2 p .date-and-time {
+html body .main-container .left-section .main-content .four-boxes .column-1 .chat-box .conversations .message-2 p .date-and-time {
   color: lightgray;
+}
+html body .main-container .left-section .main-content .column-2 {
+  width: 500px;
+}
+html body .main-container .left-section .main-content .column-2 .ticket-detail-box {
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  height: 285px;
+  margin: 2%;
+}
+html body .main-container .left-section .main-content .column-2 .ticket-detail-box .ticket-detail-header {
+  border-bottom: 1px solid lightgray;
+  padding: 2%;
+}
+html body .main-container .left-section .main-content .column-2 .ticket-detail-box .ticket-detail {
+  color: gray;
+  padding: 1%;
+  line-height: 35px;
+}
+html body .main-container .left-section .main-content .column-2 .status-management {
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  height: 250px;
+  margin: 2%;
+}
+html body .main-container .left-section .main-content .column-2 .status-management .status-management-header {
+  border-bottom: 1px solid lightgray;
+  padding: 2%;
+  color: #1D7AD6;
+}
+html body .main-container .left-section .main-content .column-2 .status-management .status-management-content {
+  padding: 2%;
+}
+html body .main-container .left-section .main-content .column-2 .transfer-reminder {
+  width: 420px;
+  margin-right: 2%;
 }
 html body .main-container .left-section .footer p {
   color: gray;

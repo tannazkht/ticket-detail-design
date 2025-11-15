@@ -1,5 +1,8 @@
 // add font here .
-
+// @font-face {
+//     font-family: iranSans;
+//     src: url(../assets/font/irsans.ttf);
+// }
 
 
 @mixin flex-manager($direction, $justify, $align) {
@@ -18,7 +21,7 @@ html {
     body {
         margin: 0;
         padding: 0;
-        //font-family: ;
+        // font-family: iranSans;
         direction: rtl;
         .main-container {
             @include flex-manager(row, unset, unset);
@@ -66,22 +69,30 @@ html {
                 // left: 20px;
                 .navbar {
                         @include flex-manager(row, unset, space-between);
-                        // border-bottom: 1px solid lightgray;
-                        // position: sticky;
-                        // top: 0;
-                        // right: 0;
+                        //  border-bottom: 1px solid lightgray;
+                         position: sticky;
+                         top: 0;
                         padding: 2%;
+                        background-color: white;
+                        z-index: 2;
                     .search-box {
                         input {
                             background-color: #F6F6FB;
                             border: none;
                             border-radius: 5px;
-                            width: 400px;
+                            width: 600px;
+                            padding: 1.5%;
+                        }
+                        img {
+                            width: 20px;
+                            position: relative;
+                            left: 40px;
                         }
                     }
                     .user-account {
                         position: fixed;
                         left: 20px;
+                        // ?????
                         .user-image {
                             width: 60px;
                             border-radius: 100%;
@@ -151,13 +162,18 @@ html {
                             }
                         }
                     }
-                    .row-2 {
-                        @include flex-manager(row, unset, unset);
+                    .four-boxes {
+                        display: flex;
+                        margin-right: 4%;
+                    .column-1 {
+                        @include flex-manager(column, unset, unset);
+                        width: 1000px;
                         .subject-box {
                             border: 1px solid lightgray;
                             border-radius: 10px;
-                            padding: 5%;
-                            width: 80%;
+                            padding: 1%;
+                            // width: 100%;
+                            margin: 1%;
                             .line-1 {
                                 @include flex-manager(row, space-between, center);
                                 span {
@@ -171,25 +187,13 @@ html {
                                 padding: 1% 0;
                             }
                         }
-                        .ticket-detail-box {
+
+                            .chat-box {
                             border: 1px solid lightgray;
                             border-radius: 10px;
-                            .ticket-detail-header {
-                                border-bottom: 1px solid lightgray;
-                            }
-                            .ticket-detail {
-                                color: gray;
-                                padding: 1%;
-                                line-height: 35px;
-                            }
-                        }
-                    }
-                    .row-3 {
-                        .chat-box {
-                            border: 1px solid lightgray;
-                            border-radius: 20px;
-                            width: 80%;
+                            width: 1000px;
                             padding: 2%;
+                            margin: 2% 0;
                             .chat-header {
                                 border: 1px solid lightgray;
                                 background-color: lightgray;
@@ -219,6 +223,9 @@ html {
                                     }
                                     i {
                                         font-size: 30px;
+                                        background-color: #EDEDED;
+                                        border-radius: 100%;
+                                        padding: 0 5px;
                                     }
                                     p {
                                         .date-and-time {
@@ -230,7 +237,7 @@ html {
                                     direction: ltr;
                                     .message {
                                         color: gray;
-                                        background-color: lightgray;
+                                        background-color: #EDEDED;
                                         padding: 1.5% 2%;
                                         border-top-left-radius: 20px;
                                         border-bottom-left-radius: 0%;
@@ -248,6 +255,51 @@ html {
                                     }
                                 }
                             }
+                        }
+                    }
+                    }
+
+
+
+
+
+                    .column-2 {
+                        // @include flex-manager(row, unset, unset);
+                        width: 500px;
+                        
+                        .ticket-detail-box {
+                            border: 1px solid lightgray;
+                            border-radius: 10px;
+                            height: 285px;
+                            margin: 2%;
+                            .ticket-detail-header {
+                                border-bottom: 1px solid lightgray;
+                                padding: 2%;
+                            }
+                            .ticket-detail {
+                                color: gray;
+                                padding: 1%;
+                                line-height: 35px;
+                            }
+                        }
+                        .status-management {
+                                border: 1px solid lightgray;
+                                border-radius: 10px;
+                                // width: 30%;
+                                height: 250px;
+                                margin: 2%;
+                            .status-management-header {
+                                border-bottom: 1px solid lightgray;
+                                padding: 2%;
+                                color: #1D7AD6;
+                            }
+                            .status-management-content {
+                                padding: 2%;
+                            }
+                        }
+                        .transfer-reminder {
+                            width: 420px;
+                            margin-right: 2%;
                         }
                     }
                 }
