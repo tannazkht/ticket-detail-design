@@ -44,10 +44,10 @@ html body .main-container .right-section .sidebar .menu-options a {
 }
 html body .main-container .right-section .sidebar .menu-options a:hover {
   color: #1D577A;
-  background-color: #707FDD;
+  background-color: #A6ABC8;
 }
 html body .main-container .right-section .sidebar .menu-options a img:hover {
-  background-image: #1D577A;
+  background-color: #1D577A;
 }
 html body .main-container .right-section .sidebar .menu-options .menu, html body .main-container .right-section .sidebar .menu-options .others {
   padding: 5%;
@@ -68,8 +68,8 @@ html body .main-container .left-section {
 html body .main-container .left-section .navbar {
   display: flex;
   flex-direction: row;
-  justify-content: unset;
-  align-items: space-between;
+  justify-content: space-between;
+  align-items: unset;
   position: sticky;
   top: 0;
   padding: 2%;
@@ -152,7 +152,12 @@ html body .main-container .left-section .main-content .row-1 .row-1-3 .status-pr
   background-color: gray;
 }
 html body .main-container .left-section .main-content .row-1 .row-1-3 .status-progress .progress-line {
+  position: absolute;
+  top: 30px;
   height: 2px;
+  background-color: lightgray;
+  z-index: -1;
+  width: 1250px;
 }
 html body .main-container .left-section .main-content .four-boxes {
   display: flex;
@@ -281,6 +286,11 @@ html body .main-container .left-section .main-content .column-2 .status-manageme
 html body .main-container .left-section .main-content .column-2 .transfer-reminder {
   width: 420px;
   margin-right: 2%;
+}
+html body .main-container .left-section .main-content .column-2 .transfer-reminder button {
+  display: flex;
+  justify-content: flex-start;
+  border: 1px solid lightgray;
 }
 html body .main-container .left-section .footer p {
   color: gray;

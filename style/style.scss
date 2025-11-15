@@ -46,10 +46,10 @@ html {
                     }
                     a:hover {
                         color: #1D577A;
-                        background-color: #707FDD;
+                        background-color: #A6ABC8;
                     }
                     a img:hover {
-                        background-image: #1D577A;
+                        background-color: #1D577A;
                     }
                     .menu, .others {
                         padding: 5%;
@@ -68,7 +68,7 @@ html {
                 right: 260px;
                 // left: 20px;
                 .navbar {
-                        @include flex-manager(row, unset, space-between);
+                        @include flex-manager(row, space-between, unset);
                         //  border-bottom: 1px solid lightgray;
                          position: sticky;
                          top: 0;
@@ -157,7 +157,15 @@ html {
                                 }
                                 .progress-line {
                                     // position: absolute;
+                                    // height: 2px;
+                                    position: absolute;
+                                    top: 30px;
+                                    // right: 100px;
+                                    // left: 100px;
                                     height: 2px;
+                                    background-color: lightgray;
+                                    z-index: -1;
+                                    width: 1250px;
                                 }
                             }
                         }
@@ -300,6 +308,11 @@ html {
                         .transfer-reminder {
                             width: 420px;
                             margin-right: 2%;
+                            button {
+                                display: flex;
+                                justify-content: flex-start;
+                                border: 1px solid lightgray;
+                            }
                         }
                     }
                 }
