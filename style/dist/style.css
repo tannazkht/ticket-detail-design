@@ -1,3 +1,7 @@
+@font-face {
+  font-family: iranSans;
+  src: url(../assets/font/IRANSansXFaNum-Regular.woff);
+}
 * {
   box-sizing: border-box;
 }
@@ -8,6 +12,7 @@ html {
 html body {
   margin: 0;
   padding: 0;
+  font-family: iranSans;
   direction: rtl;
 }
 html body .main-container {
@@ -90,6 +95,7 @@ html body .main-container .left-section .navbar .search-box img {
 }
 html body .main-container .left-section .navbar .user-account {
   position: fixed;
+  top: 10px;
   left: 20px;
 }
 html body .main-container .left-section .navbar .user-account .user-image {
@@ -189,7 +195,7 @@ html body .main-container .left-section .main-content .four-boxes .column-1 .sub
   color: #0080C9;
   border: 1px solid #0080C9;
   border-radius: 10px;
-  padding: 1%;
+  padding: 1% 2%;
 }
 html body .main-container .left-section .main-content .four-boxes .column-1 .subject-box p {
   padding: 1% 0;
@@ -216,6 +222,9 @@ html body .main-container .left-section .main-content .four-boxes .column-1 .cha
   color: black;
   background-color: white;
   border-radius: 20px;
+}
+html body .main-container .left-section .main-content .four-boxes .column-1 .chat-box .conversations {
+  border-bottom: 1px solid lightgray;
 }
 html body .main-container .left-section .main-content .four-boxes .column-1 .chat-box .conversations .message-1, html body .main-container .left-section .main-content .four-boxes .column-1 .chat-box .conversations .message-3 {
   padding-top: 30px;
@@ -264,6 +273,27 @@ html body .main-container .left-section .main-content .four-boxes .column-1 .cha
 }
 html body .main-container .left-section .main-content .four-boxes .column-1 .chat-box .conversations .message-2 p .date-and-time {
   color: lightgray;
+}
+html body .main-container .left-section .main-content .four-boxes .column-1 .chat-box .input-section {
+  margin-top: 3%;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  padding: 2%;
+}
+html body .main-container .left-section .main-content .four-boxes .column-1 .chat-box .input-section form textarea {
+  border: none;
+}
+html body .main-container .left-section .main-content .four-boxes .column-1 .chat-box .input-section .inputOptions-sendButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+html body .main-container .left-section .main-content .four-boxes .column-1 .chat-box .input-section .inputOptions-sendButton .input-options button i {
+  color: gray;
+}
+html body .main-container .left-section .main-content .four-boxes .column-1 .chat-box .input-section .inputOptions-sendButton .send-button button {
+  background-color: #0086D8;
 }
 html body .main-container .left-section .main-content .column-2 {
   width: 500px;

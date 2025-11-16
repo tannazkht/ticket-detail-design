@@ -1,8 +1,8 @@
 // add font here .
-// @font-face {
-//     font-family: iranSans;
-//     src: url(../assets/font/irsans.ttf);
-// }
+ @font-face {
+    font-family: iranSans;
+    src: url(../assets/font/IRANSansXFaNum-Regular.woff);
+}
 
 
 @mixin flex-manager($direction, $justify, $align) {
@@ -21,7 +21,7 @@ html {
     body {
         margin: 0;
         padding: 0;
-        // font-family: iranSans;
+        font-family: iranSans;
         direction: rtl;
         .main-container {
             @include flex-manager(row, unset, unset);
@@ -91,6 +91,7 @@ html {
                     }
                     .user-account {
                         position: fixed;
+                        top: 10px;
                         left: 20px;
                         // ?????
                         .user-image {
@@ -190,7 +191,7 @@ html {
                                     color: #0080C9;
                                     border: 1px solid #0080C9;
                                     border-radius: 10px;
-                                    padding: 1%;
+                                    padding: 1% 2%;
                                 }
                             }
                             p {
@@ -222,6 +223,7 @@ html {
                                 }
                             }
                             .conversations {
+                                border-bottom: 1px solid lightgray;
                                 .message-1, .message-3 {
                                     padding-top: 30px;
                                     .message {
@@ -271,14 +273,35 @@ html {
                                     }
                                 }
                             }
+                            .input-section {
+                                margin-top: 3%;
+                                border: 1px solid lightgray;
+                                border-radius: 10px;
+                                padding: 2%;
+                                form {
+                                    textarea {
+                                        border: none;
+                                    }
+                                }
+                                .inputOptions-sendButton {
+                                    @include flex-manager(row, space-between, center);
+                                    .input-options {
+                                        button {
+                                            i {
+                                                color: gray;
+                                            }
+                                        }
+                                    }
+                                    .send-button {
+                                        button {
+                                            background-color: #0086D8;
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
                     }
-
-
-
-
-
                     .column-2 {
                         // @include flex-manager(row, unset, unset);
                         width: 500px;

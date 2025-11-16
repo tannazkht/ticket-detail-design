@@ -83,16 +83,6 @@
                 </div>
             </div>
 
-
-
-
-
-
-
-
-
-
-
             <div class="main-content">
                 <!-- main content -->
                  <div class="row-1">
@@ -125,12 +115,6 @@
                         </div>
                  </div>
 
-
-
-
-
-
-
                  <div class="four-boxes">
                     <div class="column-1">
                         <div class="subject-box">
@@ -149,21 +133,21 @@
                                 <a href="#">مکالمه</a>
                                 <a href="#">یادداشت های داخلی</a>
                             </div>
-                            <div class="conversations">
+                            <div class="conversations" id="conversationMessages">
                                 <div class="message-1">
                                     <div class="image-and-message">
                                         <!-- <img src="" alt=""> -->
                                         <i class="bi bi-headset"></i>
                                         <span class="message">سلام، مشکل شما در حال بررسی است. لطفا نام کاربری دقیق خود را ارسال کنید.</span>
                                     </div>
-                                    <p>علی محمدی- پشتیبانی فنی <span class="date-and-time">۲۵ دی ۱۴۰۲ ساعت ۱۱:۰۰</span></p>
+                                    <p>علی محمدی- پشتیبانی فنی <span class="date-and-time"> ۲۵ دی ۱۴۰۲ ساعت ۱۱:۰۰</span></p>
                                 </div>
                                 <div class="message-2">
                                     <div class="image-and-message">
                                         <img src="../assets/images/user1.jpg" alt="user image">
                                         <span class="message">نام کاربری من: ahmad.mohammadi است.</span>
                                     </div>
-                                    <p> پارسا حسینی<span class="date-and-time">۲۵ دی ۱۴۰۲ ساعت ۱۱:۰۰</span></p>
+                                    <p> پارسا حسینی<span class="date-and-time"> ۲۵ دی ۱۴۰۲ ساعت ۱۱:۰۰</span></p>
                                 </div>
                                 <div class="message-3">
                                     <div class="image-and-message">
@@ -171,13 +155,58 @@
                                         <i class="bi bi-headset"></i>
                                         <span class="message">سلام، مشکل شما در حال بررسی است. لطفا نام کاربری دقیق خود را ارسال کنید.</span>
                                     </div>
-                                    <p> علی محمدی- پشتیبانی فنی<span class="date-and-time">۲۵ دی ۱۴۰۲ ساعت ۱۱:۰۰</span></p>
+                                    <p> علی محمدی- پشتیبانی فنی<span class="date-and-time"> ۲۵ دی ۱۴۰۲ ساعت ۱۱:۰۰</span></p>
                                 </div>
                             </div>
                             <div class="input-section">
                                 <form action="" method>
-                                    <textarea name="text"></textarea>
+                                    <textarea name="text" rows="5" cols="104" id="messageInput" placeholder="پاسخ خود را بنویسید ..."></textarea>
+                                    <input type="file" id="fileInput" style="display: none;" accept="image/*,application/pdf,.doc,.docx">
                                 </form>
+                                <div class="inputOptions-sendButton">
+                                    <div class="input-options">
+                                        <button class="btn btn-light btn-sm" id="attachBtn" title="پیوست فایل">
+                                            <i class="bi bi-paperclip"></i>
+                                        </button>
+                                        <button class="btn btn-light btn-sm" id="emojiBtn" title="افزودن ایموجی">
+                                            <i class="bi bi-emoji-smile"></i>
+                                        </button>
+                                        <button class="btn btn-light btn-sm" id="imageBtn" title="افزودن تصویر">
+                                            <i class="bi bi-image"></i>
+                                        </button>
+                                        <button class="btn btn-light btn-sm" id="fontSizeBtn" title="اندازه فونت">
+                                            <i class="bi bi-fonts"></i>
+                                        </button>
+                                    </div>
+
+
+                                    <!-- Font Size Dropdown  -->
+                                    <div class="font-size-dropdown" id="fontSizeDropdown" style="display: none;">
+                                        <button class="font-size-option" data-size="12">کوچک</button>
+                                        <button class="font-size-option" data-size="14">متوسط</button>
+                                        <button class="font-size-option" data-size="16">بزرگ</button>
+                                    </div>
+
+
+                                    <!-- Emoji Picker  -->
+                                    <div class="emoji-picker" id="emojiPicker" style="display: none;">
+                                        <button class="emoji-option">😊</button>
+                                        <button class="emoji-option">👍</button>
+                                        <button class="emoji-option">❤️</button>
+                                        <button class="emoji-option">😂</button>
+                                        <button class="emoji-option">🎉</button>
+                                        <button class="emoji-option">✅</button>
+                                        <button class="emoji-option">🔥</button>
+                                        <button class="emoji-option">💯</button>
+                                    </div>
+
+                                    <div class="send-button">
+                                        <button class="btn btn-primary" id="sendNoteBtn">
+                                            
+                                        ارسال  <i class="bi bi-send-fill"></i>
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -222,7 +251,7 @@
                             </button>
 
                             <button class="btn btn-outline-secondary w-100" data-bs-toggle="modal" data-bs-target="#reminderModal">
-                                <i class="bi bi-calendar me-2"></i>
+                                <i class="bi bi-calendar2-week me-2"></i>
                                 تنظیم یادآوری
                             </button>
                         </div>
@@ -247,13 +276,13 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header border-0">
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     <h5 class="modal-title" id="transferModalLabel">انتقال تیکت به همکار دیگر</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body px-4">
                     <div class="mb-4">
                         <label class="form-label">انتخاب همکار</label>
-                        <select class="form-select form-select-lg">
+                        <select class="form-select form-select-lg" style="background-color: #FAFAFD; color: gray;">
                             <option selected>انتخاب کنید</option>
                             <option value="1">علی محمدی</option>
                             <option value="2">سارا احمدی</option>
@@ -262,12 +291,12 @@
                     </div>
                     <div class="mb-4">
                         <label class="form-label">توضیحات</label>
-                        <textarea class="form-control" rows="4" placeholder="توضیحات خود را وارد کنید"></textarea>
+                        <textarea class="form-control" rows="2" cols="60" placeholder="توضیحات خود را وارد کنید" style="background-color: #FAFAFD; color: gray;"></textarea>
                     </div>
                 </div>
                 <div class="modal-footer border-0 px-4 pb-4">
-                    <button type="button" class="btn btn-outline-primary px-4" data-bs-dismiss="modal">لغو</button>
-                    <button type="button" class="btn btn-primary px-4">ذخیره</button>
+                    <button type="button" class="btn px-4" data-bs-dismiss="modal" style="border: 1px solid #0080C9; color: #0080C9;">لغو</button>
+                    <button type="button" class="btn px-4" style="background-color: #0080C9; color: white;">ذخیره</button>
                 </div>
             </div>
         </div>
@@ -278,26 +307,23 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header border-0">
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     <h5 class="modal-title" id="reminderModalLabel">تنظیم یادآوری</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body px-4">
                     <div class="mb-4">
-                        <label class="form-label">انتخاب تاریخ</label>
-                        <input type="text" class="form-control form-control-lg" id="reminderDate" placeholder="تاریخ را انتخاب کنید">
-                    </div>
-                    <div class="mb-4">
                         <label class="form-label">انتخاب زمان</label>
-                        <input type="time" class="form-control form-control-lg" id="reminderTime">
+                        <input type="text" class="form-control form-control-lg" id="reminderDate" placeholder="DD/MM/YY" style="color: lightgray;">
+                       <a href="" style="color: gray; font-size: 23px; position: absolute; left: 33px; bottom: 165px;"><i class="bi bi-calendar2-event"></i></a>
                     </div>
                     <div class="mb-4">
                         <label class="form-label">توضیحات</label>
-                        <textarea class="form-control" rows="4" placeholder="توضیحات خود را وارد کنید"></textarea>
+                        <textarea class="form-control" rows="2" cols="60"></textarea>
                     </div>
                 </div>
                 <div class="modal-footer border-0 px-4 pb-4">
-                    <button type="button" class="btn btn-outline-primary px-4" data-bs-dismiss="modal">لغو</button>
-                    <button type="button" class="btn btn-primary px-4">ذخیره</button>
+                    <button type="button" class="btn px-4" data-bs-dismiss="modal" style="border: 1px solid #0080C9; color: #0080C9;">لغو</button>
+                    <button type="button" class="btn btn-primary px-4" style="background-color: #0080C9; color: white;">ذخیره</button>
                 </div>
             </div>
         </div>

@@ -1,12 +1,20 @@
 document.addEventListener("DOMContentLoaded", () => {
   // Get elements
-  const sendBtn = document.getElementById("sendBtn")
+  const sendBtn = document.getElementById("sendBtn") //????
   const messageInput = document.getElementById("messageInput")
-  const conversationMessages = document.getElementById("conversationMessages")
+  const conversationMessages = document.getElementById("conversationMessages") //in which tag ??
 
   const sendNoteBtn = document.getElementById("sendNoteBtn")
-  const noteInput = document.getElementById("noteInput")
-  const notesMessages = document.getElementById("notesMessages")
+  const noteInput = document.getElementById("noteInput") //????
+  const notesMessages = document.getElementById("notesMessages") //????
+
+
+
+
+
+
+///////////////////
+
 
   const emojiBtn = document.getElementById("emojiBtn")
   const emojiPicker = document.getElementById("emojiPicker")
