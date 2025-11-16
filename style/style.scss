@@ -22,7 +22,7 @@ html {
         margin: 0;
         padding: 0;
         font-family: iranSans;
-        direction: rtl;
+        direction: rtl;            
         .main-container {
             @include flex-manager(row, unset, unset);
             .right-section {
@@ -69,9 +69,9 @@ html {
                 // left: 20px;
                 .navbar {
                         @include flex-manager(row, space-between, unset);
-                        //  border-bottom: 1px solid lightgray;
-                         position: sticky;
-                         top: 0;
+                        // border-bottom: 1px solid lightgray;
+                        position: sticky;
+                        top: 0;
                         padding: 2%;
                         background-color: white;
                         z-index: 2;
