@@ -2,11 +2,16 @@ document.addEventListener("DOMContentLoaded", () => {
   // Get elements
   const sendBtn = document.getElementById("sendBtn") //????
   const messageInput = document.getElementById("messageInput")
-  const conversationMessages = document.getElementById("conversationMessages") //in which tag ??
+  var conversationMessages = document.getElementById("conversationMessages");  //in which tag ??
 
   const sendNoteBtn = document.getElementById("sendNoteBtn")
   const noteInput = document.getElementById("noteInput") //????
   const notesMessages = document.getElementById("notesMessages") //????
+
+
+  var isConversation = true;
+
+
 
 
 
@@ -116,62 +121,80 @@ document.addEventListener("DOMContentLoaded", () => {
     fontSizeDropdown.style.display = "none"
   })
 
+
+    $(".nav-item").click(function(){
+  var value = $(this).data("value")
+  if(value == 0){
+    isConversation = true
+    conversationMessages = document.getElementById("conversationMessages")
+  }else{
+    isConversation = false
+      conversationMessages = document.getElementById("conversationMessages2")
+
+  }
+  })
+
+
   function addMessage(container, text, type) {
+    
+
+
+
     const messageWrapper = document.createElement("div")
     messageWrapper.className = "message-wrapper mb-4"
-
     const now = new Date()
     const persianDate = now.toLocaleDateString("fa-IR")
     const time = now.toLocaleTimeString("fa-IR", { hour: "2-digit", minute: "2-digit" })
 
     let messageHTML = ""
 
-    if (type === "user") {
+
+    if(isConversation){
+            if (type === "user") {
       // User messages appear on the LEFT side
       messageHTML = `
-                                <div class="message-3">
-                                    <div class="image-and-message">
-                                        <!-- <img src="" alt=""> -->
-                                        <i class="bi bi-headset"></i>
-                                        <span class="message">${text}</span>
-                                    </div>
-                                    <p> علی محمدی- پشتیبانی فنی<span class="date-and-time"> ${persianDate} ساعت ${time}</span></p>
-                                </div>
+          <div class="message-3">
+              <div class="image-and-message">
+                  <!-- <img src="" alt=""> -->
+                  <i class="bi bi-headset"></i>
+                  <span class="message">${text}</span>
+              </div>
+              <p> علی محمدی- پشتیبانی فنی<span class="date-and-time"> ${persianDate} ساعت ${time}</span></p>
+          </div>
             `
     } else if (type === "support") {
       // Support messages appear on the RIGHT side
       messageHTML = `
-                                <div class="message-3">
-                                    <div class="image-and-message">
-                                        <!-- <img src="" alt=""> -->
-                                        <i class="bi bi-headset"></i>
-                                        <span class="message">${text}</span>
-                                    </div>
-                                    <p> علی محمدی- پشتیبانی فنی<span class="date-and-time">${persianDate} ساعت ${time}</span></p>
-                                </div>
-            `
-    } else if (type === "note") {
-      // Internal notes appear on the LEFT side
-      messageHTML = `
-                <div class="d-flex gap-3 align-items-start">
-                    <img src="/placeholder.svg?height=40&width=40" class="message-avatar rounded-circle" alt="Admin">
-                    <div class="flex-grow-1">
-                        <div class="message-bubble internal-note" style="font-size: ${currentFontSize}px;">
-                            ${text}
-                        </div>
-                        <div class="message-meta">
-                            یادداشت داخلی - ${persianDate} ساعت ${time}
-                        </div>
-                    </div>
+            <div class="message-3">
+                <div class="image-and-message">
+                    <!-- <img src="" alt=""> -->
+                    <i class="bi bi-headset"></i>
+                    <span class="message">${text}</span>
                 </div>
+                <p> علی محمدی- پشتیبانی فنی<span class="date-and-time">${persianDate} ساعت ${time}</span></p>
+            </div>
+            `
+    }
+    }else{
+            messageHTML = `
+              <div class="internal-notes" id="notesMessages">
+                  <div class="image-and-message">
+                      <img src="../assets/images/user1.jpg" alt="user image">
+                      <span class="message">${text}</span>
+                  </div>
+                  <p> پارسا حسینی<span class="date-and-time"> ${persianDate} ساعت ${time}</span></p>
+              </div>
             `
     }
 
+
+console.log(conversationMessages)
+
     messageWrapper.innerHTML = messageHTML
-    container.appendChild(messageWrapper)
+    conversationMessages.appendChild(messageWrapper)
 
     // Scroll to bottom
-    container.parentElement.scrollTop = container.parentElement.scrollHeight
+    conversationMessages.parentElement.scrollTop = conversationMessages.parentElement.scrollHeight
   }
 })
 
