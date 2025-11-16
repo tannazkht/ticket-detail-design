@@ -111,7 +111,7 @@ html {
                     @include flex-manager(column, unset, unset);
                     .row-1 {
                         .row-1-1 {
-                            position: fixed;
+                            // position: fixed;
                             p {
                                 a {
                                     text-decoration: none;
@@ -139,10 +139,11 @@ html {
                                 padding: 0 25%;
                                 text-align: center;
                                 i {
-                                    font-size: 40px;
+                                    font-size: 35px;
                                     border-radius: 100%;
                                     color: white;
-                                    padding: 1% 9%;
+                                    padding: 3% 14%;
+                                    padding-top: 10px;
                                 }
                                     p {
                                         width: 100px;
@@ -202,10 +203,31 @@ html {
                             .chat-box {
                             border: 1px solid lightgray;
                             border-radius: 10px;
-                            width: 1000px;
+                            width: 950px;
                             padding: 2%;
                             margin: 2% 0;
                             // margin-left: 5%;
+                            .nav-tabs {
+                                border: 1px solid #EDEDED;
+                                background-color: #EDEDED;
+                                border-radius: 30px;
+                                padding: 0.5% 1%;
+                                .nav-link {
+                                    border-radius: 30px;
+                                    color: gray;
+                                    border: none;
+                                }
+                                .nav-link:hover {
+                                    border: none;
+                                }
+                                .nav-link.active {
+                                    color: black;
+
+                                }
+                            }
+
+
+
                             .chat-header {
                                 border: 1px solid lightgray;
                                 background-color: lightgray;
@@ -216,15 +238,67 @@ html {
                                     text-decoration: none;
                                     padding: 0.5% 1%;
                                 }
-                                a:hover {
+                                a.active {
                                     color: black;
                                     background-color: white;
                                     border-radius: 20px;
                                 }
+
                             }
                             .conversations {
                                 border-bottom: 1px solid lightgray;
                                 .message-1, .message-3 {
+                                    padding-top: 30px;
+                                    .message {
+                                    color: white;
+                                    background-color: #1D7AD6;
+                                    padding: 1.5% 2%;
+                                    border-top-left-radius: 20px;
+                                    border-bottom-left-radius: 20px;
+                                    border-bottom-right-radius: 0%;
+                                    border-top-right-radius: 20px;
+                                    }
+                                    i {
+                                        font-size: 30px;
+                                        background-color: #EDEDED;
+                                        border-radius: 100%;
+                                        padding: 0 10px;
+                                        padding-top: 5px;
+                                    }
+                                    p {
+                                        margin-right: 50px;
+                                        margin-top: 10px;
+                                        .date-and-time {
+                                            color: lightgray;
+                                        }
+                                    }
+                                }
+                                .message-2, .internal-notes {
+                                    direction: ltr;
+                                    .message {
+                                        color: gray;
+                                        background-color: #EDEDED;
+                                        padding: 1.5% 2%;
+                                        border-top-left-radius: 20px;
+                                        border-bottom-left-radius: 0%;
+                                        border-bottom-right-radius: 20px;
+                                        border-top-right-radius: 20px;
+                                        direction: rtl;
+                                    }
+                                    img {
+                                        width: 50px;
+                                    }
+                                        p {
+                                            margin-left: 50px;
+                                            margin-top: 10px;
+                                        .date-and-time {
+                                            color: lightgray;
+                                        }
+                                    }
+                                }
+                            }
+                            .internal-chats {
+                                                               .message-1, .message-3 {
                                     padding-top: 30px;
                                     .message {
                                     color: white;
@@ -249,7 +323,7 @@ html {
                                         }
                                     }
                                 }
-                                .message-2 {
+                                .message-2, .internal-notes {
                                     direction: ltr;
                                     .message {
                                         color: gray;
@@ -271,7 +345,7 @@ html {
                                             color: lightgray;
                                         }
                                     }
-                                }
+                                } 
                             }
                             .input-section {
                                 margin-top: 3%;
@@ -338,7 +412,7 @@ html {
                             }
                         }
                         .transfer-reminder {
-                            width: 420px;
+                            width: 460px;
                             margin-right: 2%;
                             button {
                                 display: flex;
@@ -359,6 +433,7 @@ html {
         }
     }
 }
+
 
 
 

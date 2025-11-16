@@ -46,20 +46,20 @@ document.addEventListener("DOMContentLoaded", () => {
   })
 
   // Send internal note
-  sendNoteBtn.addEventListener("click", () => {
-    const note = noteInput.value.trim()
-    if (note) {
-      addMessage(notesMessages, note, "note")
-      noteInput.value = ""
-    }
-  })
+  // sendNoteBtn.addEventListener("click", () => {
+  //   const note = noteInput.value.trim()
+  //   if (note) {
+  //     addMessage(notesMessages, note, "note")
+  //     noteInput.value = ""
+  //   }
+  // })
 
-  // Send note on Enter key
-  noteInput.addEventListener("keypress", (e) => {
-    if (e.key === "Enter") {
-      sendNoteBtn.click()
-    }
-  })
+  // // Send note on Enter key
+  // noteInput.addEventListener("keypress", (e) => {
+  //   if (e.key === "Enter") {
+  //     sendNoteBtn.click()
+  //   }
+  // })
 
   // Toggle emoji picker
   emojiBtn.addEventListener("click", (e) => {
@@ -129,35 +129,26 @@ document.addEventListener("DOMContentLoaded", () => {
     if (type === "user") {
       // User messages appear on the LEFT side
       messageHTML = `
-                <div class="d-flex gap-3 align-items-start">
-                    <img src="/placeholder.svg?height=40&width=40" class="message-avatar rounded-circle" alt="User">
-                    <div class="flex-grow-1">
-                        <div class="user-info-message" style="font-size: ${currentFontSize}px;">
-                            ${text}
-                        </div>
-                        <div class="message-meta">
-                            کاربر - ${persianDate} ساعت ${time}
-                        </div>
-                    </div>
-                </div>
+                                <div class="message-3">
+                                    <div class="image-and-message">
+                                        <!-- <img src="" alt=""> -->
+                                        <i class="bi bi-headset"></i>
+                                        <span class="message">${text}</span>
+                                    </div>
+                                    <p> علی محمدی- پشتیبانی فنی<span class="date-and-time"> ${persianDate} ساعت ${time}</span></p>
+                                </div>
             `
     } else if (type === "support") {
       // Support messages appear on the RIGHT side
       messageHTML = `
-                <div class="d-flex gap-3 align-items-start justify-content-end">
-                    <div class="message-icon">
-                        <img src="/placeholder.svg?height=24&width=24" alt="Support">
-                    </div>
-                    <div class="flex-grow-1 d-flex flex-column align-items-end">
-                        <div class="message-bubble user-message" style="font-size: ${currentFontSize}px;">
-                            ${text}
-                        </div>
-                        <div class="message-meta text-end">
-                            پشتیبان - ${persianDate} ساعت ${time}
-                        </div>
-                    </div>
-                    <img src="/placeholder.svg?height=40&width=40" class="message-avatar rounded-circle" alt="Support">
-                </div>
+                                <div class="message-3">
+                                    <div class="image-and-message">
+                                        <!-- <img src="" alt=""> -->
+                                        <i class="bi bi-headset"></i>
+                                        <span class="message">${text}</span>
+                                    </div>
+                                    <p> علی محمدی- پشتیبانی فنی<span class="date-and-time">${persianDate} ساعت ${time}</span></p>
+                                </div>
             `
     } else if (type === "note") {
       // Internal notes appear on the LEFT side
@@ -182,15 +173,22 @@ document.addEventListener("DOMContentLoaded", () => {
     // Scroll to bottom
     container.parentElement.scrollTop = container.parentElement.scrollHeight
   }
-
-  const flatpickr = window.flatpickr // Declare the flatpickr variable
-  if (reminderDateInput && typeof flatpickr !== "undefined") {
-    flatpickr(reminderDateInput, {
-      locale: "fa",
-      altInput: true,
-      altFormat: "Y/m/d",
-      dateFormat: "Y-m-d",
-      disableMobile: true,
-    })
-  }
 })
+
+
+
+flatpickr("#reminderDate", {
+  locale: "fa",
+  dateFormat: "Y-m-d"
+});
+
+
+
+// Tab switching
+// const tabs = document.querySelectorAll('.tabs');
+// tabs.forEach(tab => {
+//     tab.addEventListener('click', function() {
+//         tabs.forEach(t => t.classList.remove('active'));
+//         this.classList.add('active');
+//     });
+// });

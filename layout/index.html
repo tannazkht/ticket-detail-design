@@ -9,10 +9,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 
-    
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/fa.js"></script>
 </head>
 <body>
-    
 
     <div class="main-container">
         <div class="right-section">
@@ -123,44 +125,76 @@
                                 <span>در حال بررسی</span> 
                             </div>
                             <p>موضوع: کندی در آپلود فایل</p>
-                            <p>توضیحات: نمی توانم با نام کاربری و رمز عبور خود وارد سیستم مدیریت اسناد شوم. پیغام<br> خطای "نام کاربری یا رمز عبور اشتباه است نمایش داده می شود."</p>
+                            <p>توضیحات: نمی توانم با نام کاربری و رمز عبور خود وارد سیستم مدیریت اسناد شوم. پیغام<br> خطای "نام کاربری یا رمز عبور اشتباه است" نمایش داده می شود.</p>
                             <p>فایل پیوست:                                     <i class="bi bi-paperclip text-muted"></i>
                                         <a href="#" class="text-primary" style="text-decoration: none;">screenshot-login-error.png</a></p>
                         </div>
 
                         <div class="chat-box">
-                            <div class="chat-header">
-                                <a href="#">مکالمه</a>
-                                <a href="#">یادداشت های داخلی</a>
-                            </div>
-                            <div class="conversations" id="conversationMessages">
-                                <div class="message-1">
-                                    <div class="image-and-message">
-                                        <!-- <img src="" alt=""> -->
-                                        <i class="bi bi-headset"></i>
-                                        <span class="message">سلام، مشکل شما در حال بررسی است. لطفا نام کاربری دقیق خود را ارسال کنید.</span>
-                                    </div>
-                                    <p>علی محمدی- پشتیبانی فنی <span class="date-and-time"> ۲۵ دی ۱۴۰۲ ساعت ۱۱:۰۰</span></p>
-                                </div>
-                                <div class="message-2">
-                                    <div class="image-and-message">
-                                        <img src="../assets/images/user1.jpg" alt="user image">
-                                        <span class="message">نام کاربری من: ahmad.mohammadi است.</span>
-                                    </div>
-                                    <p> پارسا حسینی<span class="date-and-time"> ۲۵ دی ۱۴۰۲ ساعت ۱۱:۰۰</span></p>
-                                </div>
-                                <div class="message-3">
-                                    <div class="image-and-message">
-                                        <!-- <img src="" alt=""> -->
-                                        <i class="bi bi-headset"></i>
-                                        <span class="message">سلام، مشکل شما در حال بررسی است. لطفا نام کاربری دقیق خود را ارسال کنید.</span>
-                                    </div>
-                                    <p> علی محمدی- پشتیبانی فنی<span class="date-and-time"> ۲۵ دی ۱۴۰۲ ساعت ۱۱:۰۰</span></p>
-                                </div>
-                            </div>
+                            <!-- <div class="chat-header">
+                                <a href="#" class="nav-link active tabs conversation" id="tab1-tab" data-bs-toggle="tab" data-bs-target="#tab1" type="button" role="tab">مکالمه</a>
+                                <a href="#" class="nav-link active tabs internalNotes" id="tab1-tab" data-bs-toggle="tab" data-bs-target="#tab2" type="button" role="tab">یادداشت های داخلی</a>
+                            </div> -->
+
+
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="tab1-tab" data-bs-toggle="tab" data-bs-target="#tab1" type="button" role="tab">مکالمه</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="tab2-tab" data-bs-toggle="tab" data-bs-target="#tab2" type="button" role="tab">یادداشت های داخلی</button>
+                                </li>
+                            </ul>
+
+
+                                        <div class="tab-content mt-3" id="myTabContent">
+                                            <div class="tab-pane fade show active" id="tab1" role="tabpanel">
+                                                <div class="conversations" id="conversationMessages">
+                                                    <div class="message-1">
+                                                        <div class="image-and-message">
+                                                            <!-- <img src="" alt=""> -->
+                                                            <i class="bi bi-headset"></i>
+                                                            <span class="message">سلام، مشکل شما در حال بررسی است. لطفا نام کاربری دقیق خود را ارسال کنید.</span>
+                                                        </div>
+                                                        <p>علی محمدی- پشتیبانی فنی <span class="date-and-time"> ۲۵ دی ۱۴۰۲ ساعت ۱۱:۰۰</span></p>
+                                                    </div>
+                                                    <div class="message-2">
+                                                        <div class="image-and-message">
+                                                            <img src="../assets/images/user1.jpg" alt="user image">
+                                                            <span class="message">نام کاربری من: ahmad.mohammadi است.</span>
+                                                        </div>
+                                                        <p> پارسا حسینی<span class="date-and-time"> ۲۵ دی ۱۴۰۲ ساعت ۱۱:۰۰</span></p>
+                                                    </div>
+                                                    <div class="message-3">
+                                                        <div class="image-and-message">
+                                                            <!-- <img src="" alt=""> -->
+                                                            <i class="bi bi-headset"></i>
+                                                            <span class="message">سلام، مشکل شما در حال بررسی است. لطفا نام کاربری دقیق خود را ارسال کنید.</span>
+                                                        </div>
+                                                        <p> علی محمدی- پشتیبانی فنی<span class="date-and-time"> ۲۵ دی ۱۴۰۲ ساعت ۱۱:۰۰</span></p>
+                                                    </div>
+                                                </div>    
+                                            </div>
+
+
+                                            <!-- INTERNAL NOTES -->
+
+                                            <div class="tab-pane fade" id="tab2" role="tabpanel">
+                                            <div class="conversations" id="conversationMessages">
+                                                <div class="internal-notes">
+                                                    <div class="image-and-message">
+                                                        <img src="../assets/images/user1.jpg" alt="user image">
+                                                        <span class="message">نام کاربری من: ahmad.mohammadi است.</span>
+                                                    </div>
+                                                    <p> پارسا حسینی<span class="date-and-time"> ۲۵ دی ۱۴۰۲ ساعت ۱۱:۰۰</span></p>
+                                                </div>
+                                            </div>                                       
+                                        </div>
+                                        </div>
+                            
                             <div class="input-section">
                                 <form action="" method>
-                                    <textarea name="text" rows="5" cols="104" id="messageInput" placeholder="پاسخ خود را بنویسید ..."></textarea>
+                                    <textarea name="text" rows="5" cols="97" id="messageInput" placeholder="پاسخ خود را بنویسید ..."></textarea>
                                     <input type="file" id="fileInput" style="display: none;" accept="image/*,application/pdf,.doc,.docx">
                                 </form>
                                 <div class="inputOptions-sendButton">
@@ -201,7 +235,7 @@
                                     </div>
 
                                     <div class="send-button">
-                                        <button class="btn btn-primary" id="sendNoteBtn">
+                                        <button class="btn btn-primary" id="sendBtn">
                                             
                                         ارسال  <i class="bi bi-send-fill"></i>
                                         </button>
@@ -334,7 +368,6 @@
 
 <script src="../JavaScript/script.js"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
+
 </body>
 </html>
