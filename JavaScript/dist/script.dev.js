@@ -98,7 +98,8 @@ document.addEventListener("DOMContentLoaded", function () {
   document.addEventListener("click", function () {
     emojiPicker.style.display = "none";
     fontSizeDropdown.style.display = "none";
-  });
+  }); //////////////////////////////////////////////
+
   $(".nav-item").click(function () {
     var value = $(this).data("value");
 
@@ -109,7 +110,7 @@ document.addEventListener("DOMContentLoaded", function () {
       isConversation = false;
       conversationMessages = document.getElementById("conversationMessages2");
     }
-  });
+  }); /////////////////////////////////////////////
 
   function addMessage(container, text, type) {
     var messageWrapper = document.createElement("div");

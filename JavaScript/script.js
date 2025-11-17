@@ -121,6 +121,7 @@ document.addEventListener("DOMContentLoaded", () => {
     fontSizeDropdown.style.display = "none"
   })
 
+  //////////////////////////////////////////////
 
     $(".nav-item").click(function(){
   var value = $(this).data("value")
@@ -134,6 +135,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   })
 
+  /////////////////////////////////////////////
 
   function addMessage(container, text, type) {
     

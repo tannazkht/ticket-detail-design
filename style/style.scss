@@ -43,7 +43,7 @@ html {
                         color: gray;
                         text-decoration: none;
                         padding: 5%;
-                    }
+                    } 
                     a:hover {
                         color: #1D577A;
                         background-color: #A6ABC8;
@@ -176,6 +176,7 @@ html {
                     }
                     .four-boxes {
                         display: flex;
+                        // flex-wrap: wrap;
                         margin-right: 4%;
                     .column-1 {
                         @include flex-manager(column, unset, unset);
@@ -204,6 +205,7 @@ html {
                             border: 1px solid lightgray;
                             border-radius: 10px;
                             width: 950px;
+                            height: 730px;
                             padding: 2%;
                             margin: 2% 0;
                             // margin-left: 5%;
@@ -247,6 +249,8 @@ html {
                             }
                             .conversations {
                                 border-bottom: 1px solid lightgray;
+                                overflow-y: auto;
+                                height: 400px;
                                 .message-1, .message-3 {
                                     padding-top: 30px;
                                     .message {
@@ -371,6 +375,40 @@ html {
                                             background-color: #0086D8;
                                         }
                                     }
+                                    .emoji-picker, .font-size-dropdown {
+                                            position: relative;
+                                            top: 40px;
+                                            right: 0;
+                                            background: white;
+                                            border: 1px solid #dee2e6;
+                                            border-radius: 8px;
+                                            padding: 10px;
+                                            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+                                            z-index: 1000;
+                                            display: flex;
+                                            gap: 5px;
+                                            flex-wrap: wrap;
+                                            max-width: 250px;
+                                            border: none;
+                                            .emoji-option, .font-size-option {
+                                                border: none;
+                                                background: transparent;
+                                                font-size: 20px;
+                                                padding: 5px 10px;
+                                                cursor: pointer;
+                                                border-radius: 4px;
+                                                transition: background 0.2s;
+                                            }
+                                            .emoji-option:hover,
+                                            .font-size-option:hover {
+                                            background-color: #f8f9fa;
+                                            }
+                                            .font-size-option {
+                                                font-size: 14px;
+                                                width: 100%;
+                                                text-align: right;
+                                            }
+                                    }
                                 }
                             }
                         }
@@ -434,6 +472,170 @@ html {
     }
 }
 
+
+
+
+@media only screen and  (min-width: 324px) and (max-width: 767px) {
+    html {
+        body {
+            .main-container {
+                .right-section {
+                    .sidebar {
+                        display: none;
+                    }
+                }
+                .left-section {
+                position: relative;
+                right: 0;
+                .navbar {
+                    .search-box {
+                        input {
+                            width: 55%;
+                        }
+                    }
+                }
+                .main-content {
+                    .row-1 {
+                        .row-1-3 {
+                            .status-progress {
+                                display: none;
+                            }
+                        }
+                    }
+                    .four-boxes {
+                        flex-wrap: wrap;
+                        .column-1 {
+                            .subject-box {
+                                width: 300px;
+                                p {
+                                    width: 60%;
+                                }
+                            }
+                            .chat-box {
+                                width: 350px;
+                            }
+                        }
+                        .column-2 {
+                            .ticket-detail-box, .status-management, .transfer-reminder {
+                                width: 300px;
+                            }
+                        }
+                    }
+                }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    html {
+        body {
+            .main-container {
+                .right-section {
+                    .sidebar {
+                        display: block;
+                    }
+                }
+                .left-section {
+                // position: fixed;
+                right: 240px;
+                // overflow-y: auto;
+                // max-height: 1000px;
+                .navbar {
+                    .search-box {
+                        input {
+                            width: 300px;
+                        }
+                    }
+                }
+                .main-content {
+                    .row-1 {
+                        .row-1-3 {
+                            .status-progress {
+                                display: none;
+                            }
+                        }
+                    }
+                    .four-boxes {
+                        flex-wrap: wrap;
+                        .column-1 {
+                            .subject-box {
+                                width: 470px;
+                                p {
+                                    width: 60%;
+                                }
+                            }
+                            .chat-box {
+                                width: 520px;
+                            }
+                        }
+                        .column-2 {
+                            .ticket-detail-box, .status-management, .transfer-reminder {
+                                width: 470px;
+                            }
+                        }
+                    }
+                }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1777px) {
+        html {
+        body {
+            .main-container {
+                .right-section {
+                    .sidebar {
+                        display: block;
+                    }
+                }
+                .left-section {
+                    right: 240px;
+                .navbar {
+                    .search-box {
+                        input {
+                            width: 500px;
+                        }
+                    }
+                }
+                .main-content {
+                    .row-1 {
+                        .row-1-3 {
+                            .status-progress {
+                                display: none;
+                            }
+                        }
+                    }
+                    .four-boxes {
+                        // flex-wrap: wrap;
+                        .column-1 {
+                            .subject-box {
+                                width: 670px;
+                                p {
+                                    width: 60%;
+                                }
+                            }
+                            .chat-box {
+                                width: 670px;
+                            }
+                        }
+                        .column-2 {
+                            .ticket-detail-box, .status-management, .transfer-reminder {
+                                width: 670px;
+                                position: relative;
+                                left: 250px;
+                            }
+                        }
+                    }
+                }
+                }
+            }
+        }
+    }
+}
 
 
 

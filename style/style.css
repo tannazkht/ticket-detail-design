@@ -202,6 +202,7 @@ html body .main-container .left-section .main-content .four-boxes .column-1 .cha
   border: 1px solid lightgray;
   border-radius: 10px;
   width: 950px;
+  height: 730px;
   padding: 2%;
   margin: 2% 0;
 }
@@ -240,6 +241,8 @@ html body .main-container .left-section .main-content .four-boxes .column-1 .cha
 }
 html body .main-container .left-section .main-content .four-boxes .column-1 .chat-box .conversations {
   border-bottom: 1px solid lightgray;
+  overflow-y: auto;
+  height: 400px;
 }
 html body .main-container .left-section .main-content .four-boxes .column-1 .chat-box .conversations .message-1, html body .main-container .left-section .main-content .four-boxes .column-1 .chat-box .conversations .message-3 {
   padding-top: 30px;
@@ -359,6 +362,41 @@ html body .main-container .left-section .main-content .four-boxes .column-1 .cha
 html body .main-container .left-section .main-content .four-boxes .column-1 .chat-box .input-section .inputOptions-sendButton .send-button button {
   background-color: #0086D8;
 }
+html body .main-container .left-section .main-content .four-boxes .column-1 .chat-box .input-section .inputOptions-sendButton .emoji-picker, html body .main-container .left-section .main-content .four-boxes .column-1 .chat-box .input-section .inputOptions-sendButton .font-size-dropdown {
+  position: relative;
+  top: 40px;
+  right: 0;
+  background: white;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  max-width: 250px;
+  border: none;
+}
+html body .main-container .left-section .main-content .four-boxes .column-1 .chat-box .input-section .inputOptions-sendButton .emoji-picker .emoji-option, html body .main-container .left-section .main-content .four-boxes .column-1 .chat-box .input-section .inputOptions-sendButton .emoji-picker .font-size-option, html body .main-container .left-section .main-content .four-boxes .column-1 .chat-box .input-section .inputOptions-sendButton .font-size-dropdown .emoji-option, html body .main-container .left-section .main-content .four-boxes .column-1 .chat-box .input-section .inputOptions-sendButton .font-size-dropdown .font-size-option {
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+html body .main-container .left-section .main-content .four-boxes .column-1 .chat-box .input-section .inputOptions-sendButton .emoji-picker .emoji-option:hover,
+html body .main-container .left-section .main-content .four-boxes .column-1 .chat-box .input-section .inputOptions-sendButton .emoji-picker .font-size-option:hover, html body .main-container .left-section .main-content .four-boxes .column-1 .chat-box .input-section .inputOptions-sendButton .font-size-dropdown .emoji-option:hover,
+html body .main-container .left-section .main-content .four-boxes .column-1 .chat-box .input-section .inputOptions-sendButton .font-size-dropdown .font-size-option:hover {
+  background-color: #f8f9fa;
+}
+html body .main-container .left-section .main-content .four-boxes .column-1 .chat-box .input-section .inputOptions-sendButton .emoji-picker .font-size-option, html body .main-container .left-section .main-content .four-boxes .column-1 .chat-box .input-section .inputOptions-sendButton .font-size-dropdown .font-size-option {
+  font-size: 14px;
+  width: 100%;
+  text-align: right;
+}
 html body .main-container .left-section .main-content .column-2 {
   width: 500px;
 }
@@ -403,4 +441,92 @@ html body .main-container .left-section .main-content .column-2 .transfer-remind
 }
 html body .main-container .left-section .footer p {
   color: gray;
+}
+
+@media only screen and (min-width: 324px) and (max-width: 767px) {
+  html body .main-container .right-section .sidebar {
+    display: none;
+  }
+  html body .main-container .left-section {
+    position: relative;
+    right: 0;
+  }
+  html body .main-container .left-section .navbar .search-box input {
+    width: 55%;
+  }
+  html body .main-container .left-section .main-content .row-1 .row-1-3 .status-progress {
+    display: none;
+  }
+  html body .main-container .left-section .main-content .four-boxes {
+    flex-wrap: wrap;
+  }
+  html body .main-container .left-section .main-content .four-boxes .column-1 .subject-box {
+    width: 300px;
+  }
+  html body .main-container .left-section .main-content .four-boxes .column-1 .subject-box p {
+    width: 60%;
+  }
+  html body .main-container .left-section .main-content .four-boxes .column-1 .chat-box {
+    width: 350px;
+  }
+  html body .main-container .left-section .main-content .four-boxes .column-2 .ticket-detail-box, html body .main-container .left-section .main-content .four-boxes .column-2 .status-management, html body .main-container .left-section .main-content .four-boxes .column-2 .transfer-reminder {
+    width: 300px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  html body .main-container .right-section .sidebar {
+    display: block;
+  }
+  html body .main-container .left-section {
+    right: 240px;
+  }
+  html body .main-container .left-section .navbar .search-box input {
+    width: 300px;
+  }
+  html body .main-container .left-section .main-content .row-1 .row-1-3 .status-progress {
+    display: none;
+  }
+  html body .main-container .left-section .main-content .four-boxes {
+    flex-wrap: wrap;
+  }
+  html body .main-container .left-section .main-content .four-boxes .column-1 .subject-box {
+    width: 470px;
+  }
+  html body .main-container .left-section .main-content .four-boxes .column-1 .subject-box p {
+    width: 60%;
+  }
+  html body .main-container .left-section .main-content .four-boxes .column-1 .chat-box {
+    width: 520px;
+  }
+  html body .main-container .left-section .main-content .four-boxes .column-2 .ticket-detail-box, html body .main-container .left-section .main-content .four-boxes .column-2 .status-management, html body .main-container .left-section .main-content .four-boxes .column-2 .transfer-reminder {
+    width: 470px;
+  }
+}
+@media only screen and (min-width: 1025px) and (max-width: 1777px) {
+  html body .main-container .right-section .sidebar {
+    display: block;
+  }
+  html body .main-container .left-section {
+    right: 240px;
+  }
+  html body .main-container .left-section .navbar .search-box input {
+    width: 500px;
+  }
+  html body .main-container .left-section .main-content .row-1 .row-1-3 .status-progress {
+    display: none;
+  }
+  html body .main-container .left-section .main-content .four-boxes .column-1 .subject-box {
+    width: 670px;
+  }
+  html body .main-container .left-section .main-content .four-boxes .column-1 .subject-box p {
+    width: 60%;
+  }
+  html body .main-container .left-section .main-content .four-boxes .column-1 .chat-box {
+    width: 670px;
+  }
+  html body .main-container .left-section .main-content .four-boxes .column-2 .ticket-detail-box, html body .main-container .left-section .main-content .four-boxes .column-2 .status-management, html body .main-container .left-section .main-content .four-boxes .column-2 .transfer-reminder {
+    width: 670px;
+    position: relative;
+    left: 250px;
+  }
 }/*# sourceMappingURL=style.css.map */
