@@ -209,6 +209,18 @@ flatpickr("#reminderDate", {
 
 
 
+// flatpickr("#reminderDate", {
+//     locale: "fa",
+//     enableTime: true,
+//     time_24hr: true,
+//     dateFormat: "Y-m-d H:i",
+//     altInput: true,
+//     altFormat: "Y/m/d - H:i",
+// });
+
+
+
+
 // Tab switching
 // const tabs = document.querySelectorAll('.tabs');
 // tabs.forEach(tab => {
