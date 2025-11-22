@@ -131,9 +131,8 @@ document.addEventListener("DOMContentLoaded", () => {
   }else{
     isConversation = false
       conversationMessages = document.getElementById("conversationMessages2")
-
   }
-  })
+  });
 
   /////////////////////////////////////////////
 
@@ -229,3 +228,4 @@ flatpickr("#reminderDate", {
 //         this.classList.add('active');
 //     });
 // });
+
